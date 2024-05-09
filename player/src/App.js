@@ -1,9 +1,31 @@
-import logo from './logo.svg';
+import React from "react";
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
 import './App.css';
 
-function App() {
-  return 
+import LoginForm from "./components/LoginForm";
+import StartPage from "./components/startPage";
 
+
+
+const router = createBrowserRouter([
+  {
+    path: "/login",
+    element: <LoginForm/>,
+  },
+  {
+    path: "/",
+    element: <StartPage/>
+  }
+]);
+
+
+function App() {
+  return (
+    <RouterProvider router={router} />
+  )
 }
 
 export default App;
