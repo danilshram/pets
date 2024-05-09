@@ -1,7 +1,7 @@
 const LoginForm = () => {
     return (
-        <div>
-            HELLO
+        <div className="login-form">
+            
         </div>
     )
 }
