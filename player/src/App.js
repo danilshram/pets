@@ -12,13 +12,13 @@ import StartPage from "./components/startPage";
 
 const router = createBrowserRouter([
   {
+    path: "/",
+    element: <StartPage/>
+  },
+  {
     path: "/login",
     element: <LoginForm/>,
   },
-  {
-    path: "/",
-    element: <StartPage/>
-  }
 ]);
 
 

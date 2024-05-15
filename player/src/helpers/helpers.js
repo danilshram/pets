@@ -1,4 +1,6 @@
-import { authSlice, loginThunk, getUserByIdThunk, registrationThunk } from "../store/reducers"
+import {authSlice} from "../store/auth.js";
+import {loginThunk, registrationThunk, getUserByIdThunk} from "../store/thunks.js";
+
 //token
 function jwtDecode(token){ 
     try{
@@ -37,6 +39,7 @@ const actionFullLogin = (login, password) =>
             await dispatch(actionAboutMe()) 
         }
 }
+
 const actionFullRegister = (login, password) =>
   async dispatch => {
     const registerInfo = await dispatch(registrationThunk({login, password}))

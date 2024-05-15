@@ -1,4 +1,6 @@
 import { createApi } from '@reduxjs/toolkit/query/react';
+import {address} from "./index.js";
+import { graphqlRequestBaseQuery } from '@rtk-query/graphql-request-base-query';
 
 const api = createApi({
     baseQuery: graphqlRequestBaseQuery({

@@ -1,6 +1,7 @@
 import {createSlice} from '@reduxjs/toolkit';
+import { jwtDecode } from '../helpers/helpers';
 
-const authSlice = createSlice({
+export const authSlice = createSlice({
     name: 'auth',
     initialState: {token: null, payload: null},
     reducers: {
@@ -25,5 +26,3 @@ const authSlice = createSlice({
         }
     }
 })
-
-export default authSlice;
